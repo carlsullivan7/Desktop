@@ -1,2 +1,6 @@
 name = input("Hi, im Python! Whats your name")
 print("Hello, " + name + ", its nice to meet you!")
+name2 = input("I have 2 more questions, what grade have you completed, or did you graduate?")
+print("Thats great you finished" + name2 )
+name3 = input("finaly how old are you?")
+print("Okay, just to be sure your," + name3) + ("In" + name2) + ("and your name is" + name )
