@@ -1,4 +1,33 @@
-# Sample initialization
+# budget.py
+
+class Budget:
+    def __init__(self, total_funds):
+        # Step 3: Create instance variables
+        self.total_funds = total_funds
+        self.budgets = {}  # dictionary to store items and their allocated amounts
+
+    def add_item(self, item_name, amount):
+        # Add a budget item
+        self.budgets[item_name] = amount
+
+    def get_total_budgeted(self):
+        # Return total amount budgeted
+        return sum(self.budgets.values())
+
+    def get_remaining_funds(self):
+        # Return remaining funds after budgeting
+        return self.total_funds - self.get_total_budgeted()
+
+    def show_budget(self):
+        # Print all budget items and amounts
+        print("Your budget breakdown:")
+        for item, amount in self.budgets.items():
+            print(f"{item}: ${amount}")
+        print(f"Total Budgeted: ${self.get_total_budgeted()}")
+        print(f"Remaining Funds: ${self.get_remaining_funds()}")
+
+
+        # Sample initialization
 budgets = {}
 expenses = {}
 funds = 5000  # total available funds
@@ -48,3 +77,4 @@ Spend("Clothes", 500)
 Spend("Rent", 1500)  
 
 PrintBudget()
+
